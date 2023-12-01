@@ -10,7 +10,6 @@ with open(file_path, 'r') as f:
 
 
 def find_first_digit(l):
-    l = list(l)
     for d in l:
         if d.isdigit():
             return d
@@ -40,8 +39,8 @@ def part_two():
     }
     total = 0
     for line in data:
-        for s in string_to_int:
-            line = line.replace(s, s + string_to_int[s] + s)
+        for s, replacement in string_to_int.items():
+            line = line.replace(s, s + replacement + s)
         first_digit = find_first_digit(line)
         last_digit = find_first_digit(line[::-1])
         total += int(first_digit + last_digit)
