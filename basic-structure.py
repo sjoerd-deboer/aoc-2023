@@ -1,8 +1,7 @@
 TEST = True
-
-test_path = ''
-input_path = ''
-
+day = 0
+test_path = f'data/test-{day}.txt'
+input_path = f'data/day-{day}.txt'
 file_path = test_path if TEST else input_path
 
 with open(file_path, 'r') as f:
@@ -10,12 +9,12 @@ with open(file_path, 'r') as f:
 
 
 def part_one():
-    result = ''
+    result = data
     return result
 
 
 def part_two():
-    result = ''
+    result = data
     return result
 
 
