@@ -1,8 +1,6 @@
 TEST = True
 day = 0
-test_path = f'data/test-{day}.txt'
-input_path = f'data/day-{day}.txt'
-file_path = test_path if TEST else input_path
+file_path = f'data/test-{day}.txt' if TEST else f'data/day-{day}.txt'
 
 with open(file_path, 'r') as f:
     data = [x.strip() for x in f.readlines()]

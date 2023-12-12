@@ -42,21 +42,15 @@ def part_one(current, numbers):
     return part_one(n, translated_numbers)
 
 
-def part_two():
+def part_two(current):
     # find all combinations of intervals
-    first_map = maps['seed']
-    first_map_ranges = first_map['ranges']
-    for x in range(1, 8):
-        c = combinations(ranges, x)
-        for combination in c:
-            combination_result = sum([x[1] for x in combination])
-            # ranges_intersect =
-        print(f'{combinations(ranges, x)}')
-
-    print(first_map, first_map_ranges)
-    print(f'Ranges: {ranges}')
+    current_map = maps[current]
+    current_map_ranges = current_map['ranges']
+    next_map = maps[current_map['next']]
+    print(f'Current: {current_map}')
+    print(f'Next: {next_map}')
 
 
 if __name__ == '__main__':
     print(f'The solution for part 1 is: {part_one("seed", seed)} ')
-    print(f'The solution for part 2 is: {part_two()} ')
+    print(f'The solution for part 2 is: {part_two("seed")} ')
